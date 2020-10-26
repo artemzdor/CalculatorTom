@@ -1,6 +1,16 @@
 from typing import Union, List
-from src.apps.ui.directory import *
 from PySimpleGUI import Text, InputText, Cancel, Button
+from src.apps.ui.directory import (
+    input_price,
+    input_count,
+    input_state_code,
+    text_base_price,
+    text_discount,
+    text_percent,
+    text_state_name,
+    text_tax_rate,
+    text_total_price
+)
 
 layout_main: List[List[Union[Text, InputText, Button]]] = [
     [

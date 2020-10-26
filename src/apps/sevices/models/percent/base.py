@@ -33,5 +33,6 @@ class Percent:
 
     @classmethod
     def calculation_percent(cls, base_price) -> float:
-        """Расчер скидки"""
-        return round(base_price * (cls.get_percent(base_price=base_price) / 100), 2)
+        """Расчет скидки"""
+        percent: float = cls.get_percent(base_price=base_price)
+        return round(base_price * (percent / 100), 2)

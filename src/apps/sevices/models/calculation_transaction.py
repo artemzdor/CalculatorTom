@@ -21,9 +21,15 @@ class CalculationTransaction:
     def get_discount(self) -> float:
         """Стоимость со скидкой"""
         base_price: float = self.get_base_price()
-        return round(base_price - self.discount_percent.calculation_percent(base_price=base_price), 2)
+        discount: float = self.discount_percent.calculation_percent(
+            base_price=base_price
+        )
+        return round(base_price - discount, 2)
 
     def get_total_price(self) -> float:
         """Обьщая стоимость"""
         discount_price: float = self.get_discount()
-        return round(self.get_discount() + self.state.calculated_rate(discount_price=discount_price), 2)
+        calculated_rate: float = self.state.calculated_rate(
+            discount_price=discount_price
+        )
+        return round(self.get_discount() + calculated_rate, 2)

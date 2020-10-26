@@ -4,7 +4,13 @@ import pytest
 
 from src.apps.sevices.utils import search_state
 from src.apps.sevices.models.state.base import BaseState, StateType
-from src.apps.sevices.models.state.states import *
+from src.apps.sevices.models.state.states import (
+    StateUT,
+    StateNV,
+    StateTX,
+    StateAL,
+    StateCA
+)
 
 
 class TestStates:
