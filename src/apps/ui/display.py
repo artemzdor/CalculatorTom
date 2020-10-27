@@ -1,6 +1,8 @@
 from PySimpleGUI import Window, Text
 
-from src.apps.sevices.models.calculation_transaction import CalculationTransaction
+from src.apps.sevices.models.calculation_transaction import (
+    CalculationTransaction
+)
 from src.apps.ui.directory import (
     text_percent,
     text_total_price,
@@ -25,7 +27,9 @@ def clear_output_text_ui(window: Window) -> None:
         iter_text.update(value='')
 
 
-def write_output_text_ui(transaction: CalculationTransaction, window: Window) -> None:
+def write_output_text_ui(
+        transaction: CalculationTransaction, window: Window
+) -> None:
     """Запись данных UI"""
     percent_display: Text = window[text_percent]
     total_price: Text = window[text_total_price]

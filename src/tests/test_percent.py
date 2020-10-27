@@ -27,10 +27,12 @@ class TestPercent:
             (100_000.00, 15.0, 15_000.0)
         ]
     )
-    def test_percent(self, base_price: float, result_percent: float, calculation_percent: float):
+    def test_percent(self, base_price: float, result_percent: float,
+                     calculation_percent: float):
         result: float = self.percent.get_percent(base_price=base_price)
         assert result == result_percent
 
-        result_calculation_percent: float = self.percent.calculation_percent(base_price=base_price)
+        result_calculation_percent: float = self.percent.calculation_percent(
+            base_price=base_price
+        )
         assert result_calculation_percent == calculation_percent
-

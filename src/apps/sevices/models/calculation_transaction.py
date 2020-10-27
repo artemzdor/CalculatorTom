@@ -11,7 +11,9 @@ class CalculationTransaction:
     price: float = field(default=..., metadata='Количество товаров')
     count: int = field(default=..., metadata='Цена за товар')
     state_type: StateType = field(default=..., metadata='Код штата')
-    discount_percent: Type[Percent] = field(default=Percent, metadata='Процент скидки')
+    discount_percent: Type[Percent] = field(
+        default=Percent, metadata='Процент скидки'
+    )
     state: Type[BaseState] = field(default=..., metadata='Штат')
 
     def get_base_price(self) -> float:

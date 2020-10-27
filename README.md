@@ -43,3 +43,11 @@ source ./venv/bin/activate
 export PYTHONPATH=$PWD
 python -m pytest
 ```
+
+flake8
+```bash
+cd CalculatorTom # зайти в корень проекта
+source ./venv/bin/activate
+export PYTHONPATH=$PWD
+flake8 ./src/
+```

@@ -1,6 +1,8 @@
 from src.apps.sevices.models.state.states import StateNV
 from src.apps.sevices.models.state.base import StateType
-from src.apps.sevices.models.calculation_transaction import CalculationTransaction
+from src.apps.sevices.models.calculation_transaction import (
+    CalculationTransaction
+)
 
 
 class TestCalculationTransaction:

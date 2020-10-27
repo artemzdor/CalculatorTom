@@ -26,11 +26,14 @@ class TestStates:
         ]
     )
     def test_get_states(self, state_type: StateType, state: BaseState,
-                        tax_rate: float, discount_price: float, calculated_rate: float) -> None:
+                        tax_rate: float, discount_price: float,
+                        calculated_rate: float) -> None:
         state_result: Type[BaseState] = search_state(state=state_type)
         assert isinstance(state_result, type(state))
         assert state_result.state() == state.state()
         assert state_result.tax_rate() == tax_rate
-        assert state_result.calculated_rate(discount_price=discount_price) == calculated_rate
 
-
+        rate: float = state_result.calculated_rate(
+            discount_price=discount_price
+        )
+        assert rate == calculated_rate
